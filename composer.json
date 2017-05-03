@@ -1,0 +1,17 @@
+{
+    "name": "ssradio/common",
+    "description": "Common classes used across the SSRadio website",
+    "homepage": "https://github.com/ssradio/common",
+    "license": "AGPL-3.0",
+    "authors": [
+        {
+            "name": "Matt Sims",
+            "email": "matt@ssradio.com",
+            "homepage": "https://ssradio.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    }
+}
