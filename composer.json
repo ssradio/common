@@ -1,6 +1,5 @@
 {
     "name": "ssradio/common",
-    "version": "0.1.1",
     "description": "Common classes used across the SSRadio website",
     "homepage": "https://github.com/ssradio/common",
     "license": "AGPL-3.0",
