@@ -3,6 +3,8 @@
 namespace SSRadio\Common;
 
 use \Google_Service_Drive;
+use \Google_Service_Drive_DriveFile;
+use \Google_Http_MediaFileUpload;
 use \Google_Client;
 
 class GoogleDrive {
