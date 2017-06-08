@@ -39,7 +39,7 @@ class GoogleDrive {
 	 *
 	 *  @return	n/a
 	 */
-	function __construct( $application_name, $client_secret_path ) {
+	function __construct( $application_name, $client_secret_path, $subject = '' ) {
 
 		$this->application_name = $application_name;
 		$this->client_secret_path = $client_secret_path;
@@ -49,6 +49,10 @@ class GoogleDrive {
 
 		// Get the API client and construct the service object.
 		$this->client = $this->get_google_api_client();
+
+		if ( ! empty( $subject ) ) {
+			$this->client->setSubject( $subject );
+		}
 		$this->service = new Google_Service_Drive( $this->client );
 	}
 
