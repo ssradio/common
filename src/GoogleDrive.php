@@ -48,11 +48,7 @@ class GoogleDrive {
 		$this->folder_mime_type = 'application/vnd.google-apps.folder';
 
 		// Get the API client and construct the service object.
-		$this->client = $this->get_google_api_client();
-
-		if ( ! empty( $subject ) ) {
-			$this->client->setSubject( $subject );
-		}
+		$this->client = $this->get_google_api_client( $subject );
 		$this->service = new Google_Service_Drive( $this->client );
 	}
 
@@ -61,7 +57,7 @@ class GoogleDrive {
 	 *
 	 * @return Google_Client the authorized client object
 	 */
-	private function get_google_api_client() {
+	private function get_google_api_client( $subject = '' ) {
 
 		$client = new Google_Client();
 
@@ -72,6 +68,9 @@ class GoogleDrive {
 
 		$client->useApplicationDefaultCredentials();
 
+		if ( ! empty( $subject ) ) {
+			$client->setSubject( $subject );
+		}
 		return $client;
 	}
 
