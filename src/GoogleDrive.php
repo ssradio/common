@@ -132,7 +132,7 @@ class GoogleDrive {
 
 		$opt_params = array(
 			'pageSize' => 1000,
-			'fields' => 'nextPageToken, files(id, name, size, properties, mimeType, webViewLink)',
+			'fields' => 'nextPageToken, files(id, name, size, properties, mimeType, webViewLink, webContentLink, originalFilename)',
 			'orderBy' => 'name,createdTime',
 			'q' => $query,
 		);
